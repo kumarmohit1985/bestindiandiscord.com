@@ -7,81 +7,30 @@
   <meta name="google-site-verification" content="jlGTNUH_HRytm0V_tAyk0OHw5_x7o_u5AxZf_jWMiv0" />
   <title>Best Indian Discord Server | TheIndia</title>
   <meta name="description" content="Join India's most active Discord server. Chat, gaming, anime, memes and more.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
-    .container {
-  max-width: 800px;
-  width: 90%;
-  margin: auto;
-}
-    .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-}
-
-.nav-links a {
-  margin-left: 15px;
-  color: #60a5fa;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: #93c5fd;
-}
-    .logo {
-  text-decoration: none !important;
-  background: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0;
-  border: none !important;
-  display: inline-block;
-}
-    .logo {
-  font-weight: bold;
-  font-size: 20px;
-  background: linear-gradient(90deg, #ff9933, white, #138808);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-    .explore {
-  margin-top: 20px;
-}
-
-.explore-btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 20px;
-  background: #1e293b;
-  color: #60a5fa;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: 0.3s;
-  border: 1px solid #334155;
-}
-
-.explore-btn:hover {
-  background: #334155;
-  transform: translateY(-3px);
-}
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: #0b0f1a;
       color: white;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 90%;
+      margin: auto;
     }
 
     /* NAVBAR */
     .nav {
       display: flex;
       justify-content: space-between;
-      padding: 20px 40px;
+      align-items: center;
+      padding: 20px;
       position: sticky;
       top: 0;
       background: rgba(0,0,0,0.4);
@@ -92,33 +41,29 @@
     .logo {
       font-weight: bold;
       font-size: 20px;
-      background: linear-gradient(90deg, #ff9933, white, #138808);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .nav a {
-      background: #5865F2;
-      padding: 10px 20px;
-      border-radius: 8px;
       text-decoration: none;
       color: white;
-      transition: 0.3s;
     }
 
-    .nav a:hover {
-      transform: scale(1.05);
+    .nav-links a {
+      margin-left: 15px;
+      color: #60a5fa;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #93c5fd;
     }
 
     /* HERO */
     .hero {
       text-align: center;
-      padding: 120px 20px;
-      background: radial-gradient(circle at top, #1e1b4b, #0b0f1a);
+      padding: 80px 20px;
     }
 
     h1 {
-      font-size: 52px;
+      font-size: 42px;
       background: linear-gradient(90deg, #ff9933, white, #138808);
       -webkit-background-clip: text;
       color: transparent;
@@ -126,118 +71,144 @@
 
     .hero p {
       color: #cbd5f5;
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 15px 35px;
+      margin-top: 20px;
+      padding: 12px 25px;
       background: #5865F2;
       color: white;
       text-decoration: none;
-      border-radius: 12px;
+      border-radius: 10px;
       font-weight: bold;
-      box-shadow: 0 0 20px rgba(88,101,242,0.6);
-      transition: 0.3s;
     }
 
-    .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(88,101,242,0.9);
-    }
-
-    /* FEATURES */
+    /* SECTIONS */
     .section {
-      padding: 80px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
+    /* GRID */
     .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 20px;
     }
 
     .card {
-      background: rgba(255,255,255,0.05);
-      padding: 25px;
-      border-radius: 15px;
-      width: 260px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      background: rgba(255,255,255,0.08);
-    }
-
-    /* TESTIMONIALS */
-    .testimonial {
-      max-width: 600px;
-      margin: 20px auto;
       background: rgba(255,255,255,0.05);
       padding: 20px;
       border-radius: 12px;
     }
 
+    /* TESTIMONIALS */
+    .testimonial {
+      max-width: 600px;
+      margin: 15px auto;
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
     /* CTA */
     .cta {
       text-align: center;
-      padding: 100px 20px;
+      padding: 60px 20px;
       background: linear-gradient(90deg, #ff9933, #138808);
       color: black;
     }
 
-    /* STICKY JOIN BUTTON */
+    /* EXPLORE BUTTONS */
+    .explore {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .explore-btn {
+      margin: 10px;
+      padding: 10px 18px;
+      background: #1e293b;
+      color: #60a5fa;
+      text-decoration: none;
+      border-radius: 10px;
+      border: 1px solid #334155;
+    }
+
+    /* STICKY BUTTON */
     .sticky-btn {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background: #5865F2;
-      padding: 15px 20px;
+      padding: 12px 18px;
       border-radius: 50px;
       color: white;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 0 20px rgba(88,101,242,0.8);
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 20px;
       color: #94a3b8;
+    }
+
+    /* 🔥 MOBILE FIXES */
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .btn {
+        width: 100%;
+        display: block;
+      }
+
+      .sticky-btn {
+        width: 90%;
+        left: 5%;
+        right: auto;
+        text-align: center;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
   <div class="nav">
-    <a href="/" class="logo"><span class="flag">🇮🇳</span> TheIndia</a>
-
+    <a href="/" class="logo">🇮🇳 TheIndia</a>
     <div class="nav-links">
       <a href="/blog.html">Blog</a>
-      <a href="https://discord.gg/theindia">Join Server</a>
+      <a href="https://discord.gg/theindia">Join</a>
     </div>
   </div>
 
-  <!-- MAIN CONTENT WRAPPED -->
   <div class="container">
 
-    <!-- HERO -->
     <div class="hero">
       <h1>India’s Most Active Discord</h1>
       <p>Chat • Gaming • Anime • Memes • Real Indian Community</p>
       <a href="https://discord.gg/theindia" class="btn">Join TheIndia Server</a>
     </div>
 
-    <!-- FEATURES -->
     <div class="section">
-      <h2>Why Join the Best Indian Discord Server – TheIndia?</h2>
+      <h2>Why Join TheIndia?</h2>
       <div class="grid">
         <div class="card">💬 24/7 Active Chats</div>
         <div class="card">🎮 Gaming Events</div>
@@ -248,7 +219,6 @@
       </div>
     </div>
 
-    <!-- TESTIMONIALS -->
     <div class="section">
       <h2>What Members Say</h2>
       <div class="testimonial">“Finally an Indian server that’s actually active.”</div>
@@ -256,14 +226,12 @@
       <div class="testimonial">“VCs are always full, never boring.”</div>
     </div>
 
-    <!-- CTA -->
     <div class="cta">
       <h2>Join TheIndia Today 🇮🇳</h2>
       <p>Be part of India’s fastest growing Discord community</p>
       <a href="https://discord.gg/theindia" class="btn">Join Server</a>
     </div>
 
-    <!-- EXPLORE -->
     <div class="section">
       <h2>Explore More</h2>
       <div class="explore">
@@ -274,13 +242,13 @@
       </div>
     </div>
 
-  </div> <!-- END CONTAINER -->
+  </div>
 
-  <!-- STICKY BUTTON -->
-  <a href="https://discord.gg/theindia" class="sticky-btn">Join🚀</a>
+  <a href="https://discord.gg/theindia" class="sticky-btn">Join 🚀</a>
 
   <footer>
     © 2026 TheIndia • bestindiandiscord.com
   </footer>
 
 </body>
+</html>
