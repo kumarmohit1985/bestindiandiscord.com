@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Vote for Us | TheIndia Discord Server</title>
+    <meta name="description" content="Support TheIndia by voting for us on top Discord server directories like Top.gg, Discadia, and Disboard. Help our community grow!">
+    <meta name="robots" content="index, follow">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #080808;
+            --text-color: #ffffff;
+            --saffron: #FF9933;
+            --green: #138808;
+            --discord: #5865F2;
+            --gold: #FFD700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 0%, rgba(255, 153, 51, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 100%, rgba(19, 136, 8, 0.08) 0%, transparent 40%);
+            padding: 140px 20px 60px 20px;
+        }
+
+        /* --- NAVIGATION BAR CSS --- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-brand span {
+            color: var(--saffron);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--saffron);
+        }
+
+        .nav-links a.nav-btn {
+            background-color: var(--discord);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            margin-left: 10px;
+            box-shadow: 0 4px 15px -5px var(--discord);
+        }
+
+        .nav-links a.nav-btn:hover {
+            background-color: var(--text-color);
+            color: #080808;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px -5px rgba(255, 255, 255, 0.5);
+        }
+
+        /* --- VOTE PAGE CONTENT CSS --- */
+        .container {
+            max-width: 1000px; 
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #FF9933, #ffffff, #138808);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #a1a1aa;
+            margin-bottom: 50px;
+            line-height: 1.8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- VOTE CARDS GRID --- */
+        .vote-grid {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .vote-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 2px solid transparent;
+            padding: 35px 25px;
+            border-radius: 16px;
+            width: calc(33.333% - 25px); /* Adjusted for 3 cards perfectly */
+            min-width: 280px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, background 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .vote-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        /* The Tricolor Hover Effect for the 3 cards */
+        .vote-card:nth-child(1):hover { border-top-color: var(--saffron); }
+        .vote-card:nth-child(2):hover { border-top-color: var(--gold); }
+        .vote-card:nth-child(3):hover { border-top-color: var(--green); }
+
+        .vote-logo-container {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 3rem; /* Fallback emoji size */
+        }
+
+        .vote-logo-container img {
+            max-height: 100%;
+            max-width: 150px;
+            object-fit: contain;
+            /* If image is missing, the alt text and emojis handle it beautifully */
+        }
+
+        .vote-card h3 {
+            font-size: 1.5rem;
+            color: #e2e8f0;
+            margin-bottom: 10px;
+        }
+
+        .vote-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .vote-btn {
+            background-color: var(--discord);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: block;
+        }
+
+        .vote-btn:hover {
+            background-color: var(--text-color);
+            color: #080808;
+            box-shadow: 0 10px 20px -10px rgba(255,255,255,0.5);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- RESPONSIVE QUERIES --- */
+        @media (max-width: 900px) {
+            .vote-card { width: calc(50% - 25px); } /* 2 per row on tablets */
+        }
+
+        @media (max-width: 768px) {
+            .section-title { font-size: 2.8rem; }
+        }
+        
+        @media (max-width: 600px) {
+            nav { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
+            .nav-links a.nav-btn { margin-left: 0; width: 100%; text-align: center; }
+            body { padding-top: 180px; }
+            .vote-card { width: 100%; max-width: 350px; } /* 1 per row on phones */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-brand">The<span>India</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="https://discord.gg/theindia" class="nav-btn">Join Server</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Support The Server</h1>
+        <p class="subtitle">Voting takes just a few seconds but helps us reach thousands of new members across India. Click the buttons below to drop a vote!</p>
+
+        <div class="vote-grid">
+            
+            <div class="vote-card">
+                <div class="vote-logo-container">
+                    <img src="https://top.gg/favicon.png" alt="📈" onerror="this.style.display='none'"> 
+                </div>
+                <h3>Top.gg</h3>
+                <p>The largest Discord server directory. Vote for us here to boost our global ranking.</p>
+                <a href="https://top.gg/discord/servers/833653846489710592/vote" class="vote-btn" target="_blank">Vote on Top.gg</a>
+            </div>
+
+            <div class="vote-card">
+                <div class="vote-logo-container">
+                    <img src="https://discadia.com/favicon.ico" alt="🚀" onerror="this.style.display='none'">
+                </div>
+                <h3>Discadia</h3>
+                <p>Help us bump our server to the top of the search pages for Indian community tags.</p>
+                <a href="https://discadia.com/vote/theindia/" class="vote-btn" target="_blank">Vote on Discadia</a>
+            </div>
+
+            <div class="vote-card">
+                <div class="vote-logo-container">
+                    <img src="https://disboard.org/favicon.ico" alt="🌟" onerror="this.style.display='none'">
+                </div>
+                <h3>Disboard</h3>
+                <p>Drop a quick upvote to help new friends find our community easily.</p>
+                <a href="https://disboard.org/server/966912718902796359" class="vote-btn" target="_blank">Vote on Disboard</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
