@@ -38,10 +38,10 @@
             background-image: 
                 radial-gradient(circle at 15% 0%, rgba(255, 153, 51, 0.08) 0%, transparent 40%),
                 radial-gradient(circle at 85% 100%, rgba(19, 136, 8, 0.08) 0%, transparent 40%);
-            padding: 120px 20px 60px 20px;
+            padding: 140px 20px 60px 20px; /* Adjusted top padding for the new nav height */
         }
 
-        /* --- NAVIGATION BAR CSS (Identical to Index) --- */
+        /* --- NAVIGATION BAR CSS --- */
         nav {
             position: fixed;
             top: 0;
@@ -75,6 +75,7 @@
             display: flex;
             gap: 30px;
             list-style: none;
+            align-items: center; /* Aligns text links with the button */
         }
 
         .nav-links a {
@@ -82,11 +83,29 @@
             text-decoration: none;
             font-size: 1rem;
             font-weight: 600;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         .nav-links a:hover, .nav-links a.active {
             color: var(--saffron);
+        }
+
+        /* Nav Bar 'Join' Button Specific CSS */
+        .nav-links a.nav-btn {
+            background-color: var(--discord);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            margin-left: 10px;
+            box-shadow: 0 4px 15px -5px var(--discord);
+        }
+
+        .nav-links a.nav-btn:hover {
+            background-color: var(--text-color);
+            color: #080808;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px -5px rgba(255, 255, 255, 0.5);
         }
 
         /* --- ABOUT US CONTENT CSS --- */
@@ -187,7 +206,8 @@
         @media (max-width: 600px) {
             nav { flex-direction: column; padding: 15px; gap: 15px; }
             .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
-            body { padding-top: 140px; }
+            .nav-links a.nav-btn { margin-left: 0; width: 100%; text-align: center; }
+            body { padding-top: 180px; } /* Ensures content clears the stacked nav */
         }
     </style>
 </head>
@@ -195,12 +215,12 @@
 
     <nav>
         <a href="index.html" class="nav-brand">The<span>India</span></a>
-
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="https://discord.gg/theindia" class="nav-btn">Join Server</a></li>
         </ul>
     </nav>
 
@@ -216,15 +236,15 @@
 
         <div class="stats-grid">
             <div class="stat-box">
-                <div class="stat-number">18K+</div>
-                <div class="stat-label">Members</div>
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Active Members</div>
             </div>
             <div class="stat-box">
                 <div class="stat-number" style="color: var(--text-color);">24/7</div>
                 <div class="stat-label">Active Voice Chats</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number" style="color: var(--green);">10+</div>
+                <div class="stat-number" style="color: var(--green);">500+</div>
                 <div class="stat-label">Events Hosted</div>
             </div>
         </div>
