@@ -46,12 +46,12 @@
             background-image: 
                 radial-gradient(circle at 15% 0%, rgba(255, 153, 51, 0.12) 0%, transparent 40%),
                 radial-gradient(circle at 85% 100%, rgba(19, 136, 8, 0.12) 0%, transparent 40%);
-            padding: 100px 0 40px 0; /* Added top padding to account for the nav bar */
+            padding: 100px 0 40px 0; /* Ensures content isn't hidden behind the fixed nav */
         }
 
         /* --- NAVIGATION BAR CSS --- */
         nav {
-            position: absolute;
+            position: fixed; /* Changed from absolute to fixed */
             top: 0;
             left: 0;
             width: 100%;
@@ -59,10 +59,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(8, 8, 8, 0.6);
+            background: rgba(8, 8, 8, 0.85); /* Slightly darker for better readability when scrolling */
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            z-index: 100;
+            z-index: 1000; /* Increased z-index to ensure it stays above everything */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Added subtle shadow for depth */
         }
 
         .nav-brand {
@@ -101,6 +103,7 @@
             padding: 20px;
             animation: fadeIn 1.2s ease-in-out;
             z-index: 1;
+            margin-top: 40px; /* Extra margin to breathe below the sticky nav */
         }
 
         .namaste {
@@ -232,7 +235,7 @@
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            body { padding-top: 130px; } /* More padding for stacked mobile nav */
+            body { padding-top: 140px; } /* Increased padding for the stacked sticky nav */
             .feature-card { width: 100%; max-width: 320px; margin: 0 auto; text-align: center; } 
             .features { flex-direction: column; align-items: center; }
         }
