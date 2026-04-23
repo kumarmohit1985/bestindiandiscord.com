@@ -20,29 +20,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
-        /* --- TEAM SECTION CSS --- */
-        .team-container {
-            margin-top: 40px;
-            text-align: center;
-        }
-        .team-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .member-card {
-            transition: transform 0.3s ease;
-            border-radius: 12px;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.02);
-            line-height: 0; /* Fixes iframe spacing */
-        }
-        .member-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 30px -10px var(--saffron);
-        }
         :root {
             --bg-color: #080808;
             --text-color: #ffffff;
@@ -70,7 +47,7 @@
             background-image: 
                 radial-gradient(circle at 15% 0%, rgba(255, 153, 51, 0.08) 0%, transparent 40%),
                 radial-gradient(circle at 85% 100%, rgba(19, 136, 8, 0.08) 0%, transparent 40%);
-            padding: 140px 20px 60px 20px; /* Adjusted top padding for the new nav height */
+            padding: 140px 20px 60px 20px;
         }
 
         /* --- NAVIGATION BAR CSS --- */
@@ -99,15 +76,13 @@
             letter-spacing: 1px;
         }
 
-        .nav-brand span {
-            color: var(--saffron);
-        }
+        .nav-brand span { color: var(--saffron); }
 
         .nav-links {
             display: flex;
             gap: 30px;
             list-style: none;
-            align-items: center; /* Aligns text links with the button */
+            align-items: center;
         }
 
         .nav-links a {
@@ -115,14 +90,11 @@
             text-decoration: none;
             font-size: 1rem;
             font-weight: 600;
-            transition: color 0.3s ease, transform 0.3s ease;
+            transition: color 0.3s ease;
         }
 
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--saffron);
-        }
+        .nav-links a:hover, .nav-links a.active { color: var(--saffron); }
 
-        /* Nav Bar 'Join' Button Specific CSS */
         .nav-links a.nav-btn {
             background-color: var(--discord);
             color: white;
@@ -133,14 +105,7 @@
             box-shadow: 0 4px 15px -5px var(--discord);
         }
 
-        .nav-links a.nav-btn:hover {
-            background-color: var(--text-color);
-            color: #080808;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px -5px rgba(255, 255, 255, 0.5);
-        }
-
-        /* --- ABOUT US CONTENT CSS --- */
+        /* --- CONTENT CONTAINERS --- */
         .container {
             max-width: 900px; 
             width: 100%;
@@ -168,36 +133,47 @@
             line-height: 1.8;
             color: #a1a1aa;
             font-size: 1.1rem;
-            /* FIXES THE EXPANSION */
-            max-width: 800px; 
+            max-width: 850px; 
             margin-left: auto;
             margin-right: auto;
-        }
-/* This creates the space between the Team box and the Mission box */
-        .team-wrapper-card {
-            margin-bottom: 60px !important; 
             text-align: left;
         }
 
-        /* Standardizes the team layout inside the container */
+        .about-card h2 {
+            color: #e2e8f0;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid rgba(255, 153, 51, 0.3);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .about-card strong { color: white; }
+
+        /* --- TEAM SECTION --- */
+        .team-wrapper-card {
+            margin-bottom: 60px !important; 
+        }
+
         .team-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            margin-top: 20px;
-        }
-        .about-card strong {
-            color: white;
+            margin-top: 10px;
         }
 
-        .about-card h2 {
-            color: #e2e8f0;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            border-bottom: 2px solid rgba(255, 153, 51, 0.3);
-            padding-bottom: 10px;
-            display: inline-block;
+        .member-card {
+            transition: transform 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.02);
+            line-height: 0;
+        }
+
+        .member-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px -10px var(--saffron);
         }
 
         /* --- STATS GRID --- */
@@ -217,12 +193,7 @@
             flex: 1;
             min-width: 200px;
             text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .stat-box:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.04);
+            transition: 0.3s;
         }
 
         .stat-number {
@@ -236,21 +207,16 @@
             font-size: 1rem;
             color: #94a3b8;
             text-transform: uppercase;
-            letter-spacing: 1px;
             font-weight: 600;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-/* --- FOOTER CSS --- */
+        /* --- FOOTER CSS --- */
         footer {
             background: rgba(8, 8, 8, 0.95);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             padding: 60px 20px 20px;
             width: 100%;
-            margin-top: auto; /* Keeps footer at bottom even if page is short */
+            margin-top: 80px;
             backdrop-filter: blur(10px);
         }
 
@@ -260,76 +226,28 @@
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             gap: 40px;
-            text-align: left;
         }
 
-        .footer-brand h2 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--text-color);
-            margin-bottom: 15px;
-        }
-
+        .footer-brand h2 { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 15px; }
         .footer-brand span { color: var(--saffron); }
-
-        .footer-brand p {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .footer-links h3 {
-            color: #e2e8f0;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .footer-links h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 30px;
-            height: 2px;
-            background: var(--saffron);
-        }
-
+        .footer-brand p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; }
+        .footer-links h3 { color: #e2e8f0; margin-bottom: 20px; position: relative; display: inline-block; }
+        .footer-links h3::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 30px; height: 2px; background: var(--saffron); }
         .footer-links ul { list-style: none; }
-
         .footer-links li { margin-bottom: 12px; }
-
-        .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-size: 0.95rem;
-        }
-
+        .footer-links a { color: #94a3b8; text-decoration: none; transition: 0.3s; font-size: 0.95rem; }
         .footer-links a:hover { color: var(--saffron); }
+        .footer-bottom { max-width: 1000px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center; color: #64748b; font-size: 0.85rem; }
 
-        .footer-bottom {
-            max-width: 1000px;
-            margin: 40px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-            color: #64748b;
-            font-size: 0.85rem;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        /* --- RESPONSIVE QUERIES --- */
+
         @media (max-width: 768px) {
             .section-title { font-size: 2.8rem; }
-            .about-card { padding: 25px; font-size: 1rem; }
+            .footer-content { grid-template-columns: 1fr; }
             .stat-box { min-width: 100%; }
-        }
-        
-        @media (max-width: 600px) {
-            nav { flex-direction: column; padding: 15px; gap: 15px; }
-            .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
-            .nav-links a.nav-btn { margin-left: 0; width: 100%; text-align: center; }
-            body { padding-top: 180px; } /* Ensures content clears the stacked nav */
         }
     </style>
 </head>
@@ -346,21 +264,20 @@
             <li><a href="https://discord.gg/theindia" class="nav-btn">Join Server</a></li>
         </ul>
     </nav>
-<div class="container">
+
+    <div class="container">
+        
         <div class="about-card team-wrapper-card">
             <h2>The Leadership Team</h2>
             <div class="team-grid">
-                
                 <div class="member-card">
                     <iframe src="https://discordwidgets.pages.dev/user?id=1201201235424985208&theme=dark&banner=true&rounded-corners=true" 
                     width="340" height="120" frameborder="0" sandbox="allow-scripts" title="Discord Profile"></iframe>
                 </div>
-
                 <div class="member-card">
                     <iframe src="https://discordwidgets.pages.dev/user?id=565739284922105863&theme=dark&banner=true&rounded-corners=true" 
                     width="340" height="120" frameborder="0" sandbox="allow-scripts" title="Discord Profile"></iframe>
                 </div>
-
             </div>
         </div>
 
@@ -368,16 +285,9 @@
 
         <div class="about-card">
             <h2>The Digital Adda</h2>
-            <p>What started as a small group of friends...</p>
-        </div>
-    <div class="container">
-        <h1 class="section-title">Our Story</h1>
-
-        <div class="about-card">
-            <h2>The Digital Adda</h2>
             <p>What started as a small group of friends trying to find reliable teammates for late-night gaming sessions has evolved into <strong>India's most vibrant Discord community</strong>. </p>
             <br>
-            <p>At <strong>TheIndia</strong>, we believe in the spirit of <em>"Vasudhaiva Kutumbakam"</em> (the world is one family). The internet can be a chaotic place, but we created this server to be a safe, toxic-free, and welcoming digital home for everyone. Whether you are a hardcore gamer, a Bollywood fanatic, an artist, or just someone looking to chat over a virtual cup of chai, you have a place here.</p>
+            <p>At <strong>TheIndia</strong>, we believe in the spirit of <em>"Vasudhaiva Kutumbakam"</em> (the world is one family). The internet can be a chaotic place, but we created this server to be a safe, toxic-free, and welcoming digital home for everyone. Whether you are a hardcore gamer, a Bollywood fanatic, or just someone looking to chat over a virtual cup of chai, you have a place here.</p>
         </div>
 
         <div class="stats-grid">
@@ -394,24 +304,19 @@
                 <div class="stat-label">Events Hosted</div>
             </div>
         </div>
-</div>
-
-            </div>
-        </div>
-
-            </div>
-        </div>
 
         <div class="about-card">
             <h2>Our Mission</h2>
             <p>Our mission is simple: to connect Indians across the globe through shared passions. We enforce strict anti-toxicity rules to ensure that everyone, regardless of their background, feels respected and heard. We aren't just a server; we are a family.</p>
         </div>
+
     </div>
-<footer>
+
+    <footer>
         <div class="footer-content">
             <div class="footer-brand">
                 <h2>The<span>India</span></h2>
-                <p>TheIndia is the #1 <strong>best Indian Discord server</strong> for gaming, making friends, and chilling. Join our active Desi community for BGMI, Valorant, Bollywood movie nights, and 24/7 toxic-free Hindi voice chats. Experience the ultimate digital Adda in India.</p>
+                <p>TheIndia is the #1 <strong>best Indian Discord server</strong> for gaming, making friends, and chilling. Join our active Desi community for BGMI, Valorant, Bollywood movie nights, and 24/7 toxic-free Hindi voice chats.</p>
             </div>
             
             <div class="footer-links">
