@@ -118,10 +118,19 @@
             margin-bottom: 40px;
         }
 
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
         .blog-card h2 {
             color: #e2e8f0;
             margin-bottom: 20px;
-            font-size: 2rem;
+            font-size: 2.2rem;
             border-bottom: 2px solid rgba(255, 153, 51, 0.3);
             padding-bottom: 10px;
             display: inline-block;
@@ -129,38 +138,62 @@
 
         .blog-card h3 {
             color: var(--saffron);
-            margin: 25px 0 10px 0;
-            font-size: 1.4rem;
+            margin: 35px 0 15px 0;
+            font-size: 1.6rem;
+            font-weight: 800;
         }
 
         .blog-card p {
             color: #a1a1aa;
             font-size: 1.1rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .blog-card ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #a1a1aa;
+        }
+
+        .blog-card li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
         }
 
         .blog-card strong { color: white; }
 
+        .highlight-box {
+            background: rgba(255, 153, 51, 0.05);
+            border-left: 4px solid var(--saffron);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
         .cta-container {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
         }
 
         .cta-main {
             display: inline-block;
             background-color: var(--discord);
             color: white;
-            padding: 18px 40px;
+            padding: 18px 45px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1.2rem;
-            transition: 0.3s;
+            font-size: 1.3rem;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .cta-main:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(88, 101, 242, 0.4);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(88, 101, 242, 0.4);
         }
 
         footer {
@@ -173,10 +206,13 @@
         }
 
         @media (max-width: 600px) {
-            nav { flex-direction: column; padding: 15px; }
-            .nav-links { gap: 15px; margin-top: 10px; }
+            nav { padding: 15px 20px; }
+            .nav-links { display: none; }
             .section-title { font-size: 2.2rem; }
-            body { padding-top: 180px; }
+            .featured-image { height: 250px; }
+            .blog-card { padding: 25px; }
+            .blog-card h2 { font-size: 1.6rem; }
+            body { padding-top: 100px; }
         }
     </style>
 </head>
@@ -193,30 +229,51 @@
     </nav>
 
     <div class="container">
-        <h1 class="section-title">Latest Updates</h1>
+        <h1 class="section-title">Deep Dive: TheIndia 2.0</h1>
 
         <article class="blog-card">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80" alt="Indian Gaming and Community Hub" class="featured-image">
+            
             <h2>Why TheIndia is the Best Indian Discord Server in 2026</h2>
             
-            <p>Searching for the <strong>Best Indian Discord Server</strong> can be overwhelming. With thousands of options, most users are looking for a specific "vibe"—one that combines high activity with a safe, welcoming atmosphere. In 2026, <strong>TheIndia</strong> has emerged as the definitive digital Adda for over 18,000 members.</p>
+            <p>In the rapidly evolving landscape of 2026, finding a "Digital Adda" that feels like home has become a challenge. With thousands of communities surfacing daily, users are no longer just looking for a member count—they are looking for <strong>authentic connection, high-tier moderation, and meaningful activity</strong>. TheIndia has risen to the occasion, becoming the gold standard for over 18,000 active members across the country.</p>
 
-            <h3>1. Unmatched Activity: 24/7 Hindi Voice Chats</h3>
-            <p>The heart of any community is its voice. While many servers struggle with "dead" channels, our VCs are active around the clock. Whether it is a 3 AM deep-talk session or a high-energy gaming squad, you will always find someone to connect with in our <strong>active Hindi VCs</strong>.</p>
+            <div class="highlight-box">
+                <p style="margin-bottom: 0; color: white; font-style: italic;">"TheIndia isn't just a server; it's a movement focused on bringing the vibrant culture of India into the digital age with respect and safety."</p>
+            </div>
 
-            <h3>2. Safety First: A Toxic-Free Experience</h3>
-            <p>Inspired by the philosophy of <em>"Vasudhaiva Kutumbakam"</em> (the world is one family), we prioritize respect above all else. Our dedicated moderation team and custom bot features ensure a <strong>toxic-free Indian Discord</strong> environment where everyone feels heard and respected.</p>
+            <h3>1. The Pulse of 24/7 Active Voice Chats</h3>
+            <p>The heart of any community lies in its voice channels. While many servers boast high member numbers, their VCs often remain eerily silent. At <strong>TheIndia</strong>, the activity never sleeps. From 3 AM deep-talk sessions to 24/7 lo-fi study rooms and high-stakes gaming squads, there is always a friendly voice waiting on the other side. </p>
+            <ul>
+                <li><strong>Diversity of VCs:</strong> Dedicated channels for Hindi, English, and regional languages.</li>
+                <li><strong>Event Driven:</strong> Weekly "Mic-On" sessions, singing competitions, and storytelling nights.</li>
+                <li><strong>Ping-Free Zones:</strong> Respecting your notifications while keeping the hype alive.</li>
+            </ul>
 
-            <h3>3. The Ultimate Gaming & Social Hub</h3>
-            <p>From competitive <strong>Valorant India</strong> matches and <strong>BGMI</strong> tournaments to Bollywood watch parties and late-night music sessions, we offer a diverse range of activities. We aren't just a server; we are a lifestyle hub for the modern Desi community.</p>
+            <h3>2. Safety First: The "Vasudhaiva Kutumbakam" Protocol</h3>
+            <p>In 2026, internet toxicity is a major deterrent for many. We took a stand. Inspired by the philosophy of <em>"Vasudhaiva Kutumbakam"</em> (the world is one family), we implemented a rigorous moderation system that blends AI-powered protection with human empathy. </p>
+            <p>Our <strong>strictly toxic-free Indian Discord</strong> environment is designed so that everyone—regardless of gender or background—can chill without the fear of harassment. This makes us the #1 choice for female gamers and students looking for a secure space to unwind.</p>
+
+            <h3>3. Beyond Gaming: A Holistic Lifestyle Hub</h3>
+            <p>While we dominate as a <strong>Valorant India</strong> and <strong>BGMI</strong> hub, our vision extends far beyond the lobby. We recognize that the modern Desi youth is multifaceted. That's why our server includes:</p>
+            <ul>
+                <li><strong>Bollywood Watch Parties:</strong> Reliving the classics and catching new trailers together.</li>
+                <li><strong>Tech & Career Counseling:</strong> Networking with industry pros within the community.</li>
+                <li><strong>Digital Art & Music:</strong> Showcasing the immense talent hidden in our member list.</li>
+            </ul>
+
+            <p>When you join TheIndia, you aren't just adding another server to your list—you are joining a family. You are entering a space where your presence is valued, your safety is guaranteed, and your entertainment is constant.</p>
 
             <div class="cta-container">
-                <a href="https://discord.gg/theindia" class="cta-main">Join TheIndia Discord</a>
+                <p style="color: white; margin-bottom: 20px; font-weight: 600;">Are you ready to join the #1 Digital Adda in India?</p>
+                <a href="https://discord.gg/theindia" class="cta-main">Join 18,000+ Members Now</a>
             </div>
         </article>
     </div>
 
     <footer>
-        &copy; 2026 TheIndia Community. All rights reserved.
+        &copy; 2026 TheIndia Community. All rights reserved. <br>
+        Building the safest digital environment for the Indian community.
     </footer>
 
 </body>
