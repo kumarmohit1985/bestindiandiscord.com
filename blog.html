@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Server Blog & News | TheIndia</title>
-    <meta name="description" content="Stay updated with the latest news, events, and gaming tournaments from TheIndia Discord community.">
+    <meta name="description" content="Stay updated with the latest news, events, and gaming tournaments from TheIndia - the best Indian Discord community.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,20 +111,22 @@
             text-align: left;
             transition: transform 0.3s ease;
             backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
         }
 
-        .blog-card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.04); }
+        .blog-card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 153, 51, 0.3); }
 
         .blog-image { width: 100%; height: 200px; object-fit: cover; }
-        .blog-info { padding: 25px; }
+        .blog-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
         .blog-date { color: var(--saffron); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; display: block; }
         .blog-info h3 { font-size: 1.4rem; margin-bottom: 15px; color: #fff; }
-        .blog-info p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+        .blog-info p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
 
-        .read-more { color: var(--text-color); text-decoration: none; font-weight: 800; font-size: 0.9rem; }
-        .read-more:hover { color: var(--saffron); }
+        .read-more { color: var(--text-color); text-decoration: none; font-weight: 800; font-size: 0.9rem; border-bottom: 2px solid var(--saffron); width: fit-content; transition: 0.3s; }
+        .read-more:hover { color: var(--saffron); letter-spacing: 1px; }
 
-        /* --- FOOTER CSS --- */
+        /* --- FOOTER --- */
         footer {
             background: rgba(8, 8, 8, 0.95);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -193,9 +195,20 @@
 
     <div class="container">
         <h1>Latest News</h1>
-        <p style="color:#94a3b8;">Stay updated with tournaments, events, and community stories.</p>
+        <p style="color:#94a3b8;">Stay updated with tournaments, events, and community stories from India's #1 digital adda.</p>
 
         <div class="blog-grid">
+            <!-- NEW SEO MAGNET POST -->
+            <article class="blog-card">
+                <div class="blog-info">
+                    <span class="blog-date">MAY 2026</span>
+                    <h3>Why TheIndia is Rated the Best Indian Discord Server in 2026</h3>
+                    <p>Discover why 18k+ members chose TheIndia. From 24/7 active Hindi VCs to a strictly toxic-free environment, see why we are the gold standard for Desi communities.</p>
+                    <a href="best-indian-discord-server-2026.html" class="read-more">Read Full Story →</a>
+                </div>
+            </article>
+
+            <!-- EXISTING POST 1 -->
             <article class="blog-card">
                 <img src="best_active_india_discord_servers.jpg" alt="Making Friends on Discord" class="blog-image">
                 <div class="blog-info">
@@ -205,6 +218,8 @@
                     <a href="find-friends-discord-india.html" class="read-more">Read Full Guide →</a>
                 </div>
             </article>
+
+            <!-- EXISTING POST 2 -->
             <article class="blog-card">
                 <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?auto=format&fit=crop&w=800&q=80" alt="Active Indian Discord Servers" class="blog-image">
                 <div class="blog-info">
