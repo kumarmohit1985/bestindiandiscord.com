@@ -47,7 +47,7 @@
             background-image: 
                 radial-gradient(circle at 15% 0%, rgba(255, 153, 51, 0.12) 0%, transparent 40%),
                 radial-gradient(circle at 85% 100%, rgba(19, 136, 8, 0.12) 0%, transparent 40%);
-            padding-top: 120px; /* Kept padding for nav, removed bottom padding to flush the footer */
+            padding-top: 120px;
         }
 
         /* --- NAVIGATION BAR CSS --- */
@@ -119,7 +119,7 @@
             animation: fadeIn 1.2s ease-in-out;
             z-index: 1;
             text-align: center;
-            flex-grow: 1; /* Pushes footer to the bottom */
+            flex-grow: 1;
             margin-bottom: 60px;
         }
 
@@ -248,7 +248,8 @@
             letter-spacing: 20px;
             text-align: center;
         }
-/* --- HOME BLOG PREVIEW --- */
+
+        /* --- HOME BLOG PREVIEW --- */
         .home-blog-section {
             padding: 80px 20px;
             max-width: 1000px;
@@ -287,6 +288,11 @@
             border-color: var(--saffron);
         }
 
+        .home-blog-card.featured {
+            border: 1px solid rgba(255, 153, 51, 0.3);
+            background: rgba(255, 153, 51, 0.05);
+        }
+
         .home-blog-card h3 {
             color: #fff;
             margin-bottom: 12px;
@@ -298,13 +304,14 @@
             font-size: 0.9rem;
             line-height: 1.5;
         }
+
         /* --- FOOTER CSS --- */
         footer {
             background: rgba(8, 8, 8, 0.95);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             padding: 60px 20px 20px;
             width: 100%;
-            margin-top: auto; /* Keeps footer at bottom even if page is short */
+            margin-top: auto; 
             backdrop-filter: blur(10px);
         }
 
@@ -340,7 +347,6 @@
             display: inline-block;
         }
 
-        /* Underline effect for footer headers */
         .footer-links h3::after {
             content: '';
             position: absolute;
@@ -385,7 +391,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- RESPONSIVE QUERIES --- */
         @media (max-width: 850px) {
             h1 { font-size: 2.8rem; }
             .feature-card { width: calc(50% - 25px); } 
@@ -413,13 +418,13 @@
     <nav>
         <a href="/" class="nav-brand">The<span>India</span></a>
         <ul class="nav-links">
-    <li><a href="/" class="active">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="https://discord.gg/theindia" class="nav-btn">Join Server</a></li>
-</ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="https://discord.gg/theindia" class="nav-btn">Join Server</a></li>
+        </ul>
     </nav>
 
     <div class="container">
@@ -462,9 +467,17 @@
 
         <div class="decor">✧ ❂ ✧</div>
     </div>
-<section class="home-blog-section">
+
+    <section class="home-blog-section">
         <h2>From Our Blog</h2>
         <div class="home-blog-grid">
+            <!-- FEATURED POST: THE SEO MAGNET -->
+            <a href="best-indian-discord-server-2026.html" class="home-blog-card featured">
+                <h3>Best Indian Discord Server in 2026</h3>
+                <p>Why 18,000+ members call TheIndia their digital home. Discover our secret to toxic-free active VCs...</p>
+                <span style="color: var(--saffron); font-weight: 800; font-size: 0.8rem; margin-top: 15px; display: block;">READ FEATURED →</span>
+            </a>
+
             <a href="best-servers-2026.html" class="home-blog-card">
                 <h3>Best Active Indian Discord Servers</h3>
                 <p>Check out our updated 2026 list of the most engaging Desi communities...</p>
@@ -478,6 +491,7 @@
             </a>
         </div>
     </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
