@@ -41,7 +41,7 @@
             padding-top: 120px;
         }
 
-        /* --- NAVIGATION (Manifesto v2.0) --- */
+        /* --- NAVIGATION --- */
         nav {
             position: fixed;
             top: 0;
@@ -66,7 +66,7 @@
         .nav-btn { background-color: var(--discord); color: white !important; padding: 10px 24px; border-radius: 50px; font-weight: 800; box-shadow: 0 4px 15px -5px var(--discord); }
 
         /* --- CONTENT --- */
-        .container { max-width: 900px; width: 100%; padding: 40px 20px; }
+        .container { max-width: 900px; width: 100%; padding: 40px 20px; flex-grow: 1; }
         .section-title { font-size: 3rem; font-weight: 800; text-align: center; margin-bottom: 40px; background: linear-gradient(90deg, #FF9933, #ffffff, #138808); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
         .blog-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 20px; backdrop-filter: blur(10px); margin-bottom: 40px; }
@@ -85,18 +85,61 @@
         .cta-main { display: inline-block; background-color: var(--discord); color: white; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.3rem; transition: 0.4s; }
         .cta-main:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(88, 101, 242, 0.4); }
 
-        /* --- FOOTER (Manifesto v2.0) --- */
-        footer { background: rgba(8, 8, 8, 0.95); border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 60px 20px 20px; width: 100%; margin-top: auto; backdrop-filter: blur(10px); }
-        .footer-content { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; text-align: left; }
+        /* --- FOOTER (Matches Requested Image) --- */
+        footer {
+            background: rgba(8, 8, 8, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 60px 20px 20px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1.2fr 1fr;
+            gap: 40px;
+            text-align: left;
+        }
+
         .footer-brand h2 { font-size: 1.8rem; font-weight: 800; color: var(--text-color); margin-bottom: 15px; }
         .footer-brand span { color: var(--saffron); }
-        .footer-links h3 { color: #e2e8f0; margin-bottom: 20px; font-size: 1.2rem; position: relative; display: inline-block; }
-        .footer-links h3::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 30px; height: 2px; background: var(--saffron); }
+        .footer-brand p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; }
+        .footer-brand strong { color: white; }
+
+        .footer-links h3 { 
+            color: #e2e8f0; 
+            margin-bottom: 20px; 
+            font-size: 1.25rem; 
+            font-weight: 800;
+            position: relative; 
+            display: inline-block; 
+        }
+        .footer-links h3::after { 
+            content: ''; 
+            position: absolute; 
+            left: 0; 
+            bottom: -5px; 
+            width: 30px; 
+            height: 2px; 
+            background: var(--saffron); 
+        }
+
         .footer-links ul { list-style: none; }
         .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.95rem; }
+        .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.95rem; transition: 0.3s; }
         .footer-links a:hover { color: var(--saffron); }
-        .footer-bottom { max-width: 1000px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center; color: #64748b; font-size: 0.85rem; }
+
+        .footer-bottom {
+            max-width: 1000px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
 
         @media (max-width: 768px) {
             nav { padding: 15px 20px; }
@@ -104,7 +147,7 @@
             .footer-content { grid-template-columns: 1fr; text-align: center; }
             .footer-links h3::after { left: 50%; transform: translateX(-50%); }
             .section-title { font-size: 2.5rem; }
-            body { padding-top: 80px; }
+            body { padding-top: 100px; }
         }
     </style>
 </head>
@@ -144,11 +187,7 @@
             </ul>
 
             <h3>2. Safety First: The "Vasudhaiva Kutumbakam" Protocol</h3>
-            <p>In 2026, internet toxicity is a major deterrent for many. We took a stand. Inspired by the philosophy of <em>"Vasudhaiva Kutumbakam"</em> (the world is one family), we implemented a rigorous moderation system that blends AI-powered protection with human empathy.</p>
-            <p>Our <strong>strictly toxic-free Indian Discord</strong> environment is designed so that everyone—regardless of gender or background—can chill without the fear of harassment. This makes us the #1 choice for female gamers and students looking for a secure space to unwind.</p>
-
-            <h3>3. Beyond Gaming: A Holistic Lifestyle Hub</h3>
-            <p>While we dominate as a <strong>Valorant India</strong> and <strong>BGMI</strong> hub, our vision extends far beyond the lobby. We recognize that the modern Desi youth is multifaceted. That's why our server includes Bollywood watch parties, tech networking, and digital art showcases.</p>
+            <p>In 2026, internet toxicity is a major deterrent for many. We took a stand. Inspired by the philosophy of <em>"Vasudhaiva Kutumbakam"</em> (the world is one family), we implemented a rigorous moderation system that blends AI-powered protection with human empathy. Our <strong>strictly toxic-free Indian Discord</strong> environment is the #1 choice for female gamers and students looking for a secure space.</p>
 
             <div class="cta-container">
                 <p style="color: white; margin-bottom: 20px; font-weight: 600;">Are you ready to join the #1 Digital Adda in India?</p>
@@ -161,28 +200,32 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h2>The<span>India</span></h2>
-                <p>TheIndia is the #1 <strong>best Indian Discord server</strong> for gaming and chilling. Join our active community for BGMI, Valorant, and 24/7 voice chats.</p>
+                <p>TheIndia is the #1 <strong>Best Indian Discord server</strong> for gaming, making friends, and chilling. Join our active Desi community for BGMI, Valorant, Bollywood movie nights, and 24/7 toxic-free Hindi voice chats. Experience the ultimate digital Adda in India.</p>
             </div>
+            
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Our Community</a></li>
+                    <li><a href="vote.html">Support & Vote</a></li>
+                    <li><a href="blog.html">Server Blog & Updates</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                 </ul>
             </div>
+
             <div class="footer-links">
                 <h3>Community</h3>
                 <ul>
-                    <li><a href="https://discord.gg/theindia">Join Discord</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="mailto:officialtheindia@gmail.com">Business</a></li>
+                    <li><a href="https://discord.gg/theindia">Join Discord Server</a></li>
+                    <li><a href="contact.html">Contact Support</a></li>
+                    <li><a href="mailto:officialtheindia@gmail.com">Business Inquiries</a></li>
                 </ul>
             </div>
         </div>
+
         <div class="footer-bottom">
-            &copy; 2026 TheIndia Community. All rights reserved.
+            &copy; 2026 TheIndia Community. All rights reserved. Designed by Tojo & Riddler.
         </div>
     </footer>
 
