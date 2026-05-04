@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>Best Indian Discord Server | TheIndia </title>
-    <meta name="description" content="Namaste! Join TheIndia, the most premium and active Indian Discord server! Connect for Desi gaming, Bollywood watch parties, and 24/7 chilling.">
+    <title>About Us - Best Indian Discord Server | TheIndia </title>
+    <meta name="description" content="Learn about the story and mission behind TheIndia, the most active and safe Indian Discord community for gaming and social connection.">
     <meta name="keywords" content="Best Indian Discord Server, India Discord, TheIndia Discord, Desi Gaming Community, Discord Server India, Hindi Chatting, Bollywood Discord, BGMI Discord, bestindiandiscord">
     <meta name="robots" content="index, follow">
     
@@ -50,7 +50,7 @@
             padding: 140px 20px 60px 20px;
         }
 
-        /* --- NAVIGATION BAR CSS --- */
+        /* --- NAVIGATION --- */
         nav {
             position: fixed;
             top: 0;
@@ -95,9 +95,9 @@
 
         .nav-links a:hover, .nav-links a.active { color: var(--saffron); }
 
-        .nav-links a.nav-btn {
+        .nav-btn {
             background-color: var(--discord);
-            color: white;
+            color: white !important;
             padding: 10px 24px;
             border-radius: 50px;
             font-weight: 800;
@@ -105,12 +105,13 @@
             box-shadow: 0 4px 15px -5px var(--discord);
         }
 
-        /* --- CONTENT CONTAINERS --- */
+        /* --- CONTENT --- */
         .container {
             max-width: 900px; 
             width: 100%;
             animation: fadeIn 1s ease-in-out;
             z-index: 1;
+            flex-grow: 1;
         }
 
         .section-title {
@@ -133,9 +134,6 @@
             line-height: 1.8;
             color: #a1a1aa;
             font-size: 1.1rem;
-            max-width: 850px; 
-            margin-left: auto;
-            margin-right: auto;
             text-align: left;
         }
 
@@ -148,12 +146,20 @@
             display: inline-block;
         }
 
+        .about-card a {
+            color: var(--saffron);
+            text-decoration: none;
+            font-weight: 800;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .about-card a:hover { border-bottom-color: var(--saffron); }
+
         .about-card strong { color: white; }
 
         /* --- TEAM SECTION --- */
-        .team-wrapper-card {
-            margin-bottom: 60px !important; 
-        }
+        .team-wrapper-card { margin-bottom: 60px !important; }
 
         .team-grid {
             display: flex;
@@ -196,21 +202,10 @@
             transition: 0.3s;
         }
 
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--saffron);
-            margin-bottom: 5px;
-        }
+        .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--saffron); margin-bottom: 5px; }
+        .stat-label { font-size: 1rem; color: #94a3b8; text-transform: uppercase; font-weight: 600; }
 
-        .stat-label {
-            font-size: 1rem;
-            color: #94a3b8;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        /* --- FOOTER CSS --- */
+        /* --- FOOTER --- */
         footer {
             background: rgba(8, 8, 8, 0.95);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -224,14 +219,15 @@
             max-width: 1000px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 2fr 1.2fr 1fr;
             gap: 40px;
+            text-align: left;
         }
 
         .footer-brand h2 { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 15px; }
         .footer-brand span { color: var(--saffron); }
         .footer-brand p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; }
-        .footer-links h3 { color: #e2e8f0; margin-bottom: 20px; position: relative; display: inline-block; }
+        .footer-links h3 { color: #e2e8f0; margin-bottom: 20px; font-weight: 800; position: relative; display: inline-block; }
         .footer-links h3::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 30px; height: 2px; background: var(--saffron); }
         .footer-links ul { list-style: none; }
         .footer-links li { margin-bottom: 12px; }
@@ -245,8 +241,11 @@
         }
 
         @media (max-width: 768px) {
+            nav { padding: 15px 20px; }
+            .nav-links { display: none; }
             .section-title { font-size: 2.8rem; }
-            .footer-content { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+            .footer-links h3::after { left: 50%; transform: translateX(-50%); }
             .stat-box { min-width: 100%; }
         }
     </style>
@@ -285,7 +284,7 @@
 
         <div class="about-card">
             <h2>The Digital Adda</h2>
-            <p>What started as a small group of friends trying to find reliable teammates for late-night gaming sessions has evolved into <strong>India's most vibrant Discord community</strong>. </p>
+            <p>What started as a small group of friends trying to find reliable teammates for late-night gaming sessions has evolved into <strong>India's most vibrant Discord community</strong>.</p>
             <br>
             <p>At <strong>TheIndia</strong>, we believe in the spirit of <em>"Vasudhaiva Kutumbakam"</em> (the world is one family). The internet can be a chaotic place, but we created this server to be a safe, toxic-free, and welcoming digital home for everyone. Whether you are a hardcore gamer, a Bollywood fanatic, or just someone looking to chat over a virtual cup of chai, you have a place here.</p>
         </div>
@@ -306,6 +305,11 @@
         </div>
 
         <div class="about-card">
+            <h2>Evolution & Growth</h2>
+            <p>Our journey hasn't just been about numbers; it's about setting a standard for Indian digital communities. In 2026, we have been officially recognized for our commitment to high activity and safety. You can learn more about our framework and <a href="best-indian-discord-server-2026.html">why we are rated the best Indian Discord server here</a>.</p>
+        </div>
+
+        <div class="about-card">
             <h2>Our Mission</h2>
             <p>Our mission is simple: to connect Indians across the globe through shared passions. We enforce strict anti-toxicity rules to ensure that everyone, regardless of their background, feels respected and heard. We aren't just a server; we are a family.</p>
         </div>
@@ -316,7 +320,7 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h2>The<span>India</span></h2>
-                <p>TheIndia is the #1 <strong>best Indian Discord server</strong> for gaming, making friends, and chilling. Join our active Desi community for BGMI, Valorant, Bollywood movie nights, and 24/7 toxic-free Hindi voice chats.</p>
+                <p>TheIndia is the #1 <strong>Best Indian Discord server</strong> for gaming, making friends, and chilling. Join our active Desi community for BGMI, Valorant, Bollywood movie nights, and 24/7 toxic-free Hindi voice chats. Experience the ultimate digital Adda in India.</p>
             </div>
             
             <div class="footer-links">
