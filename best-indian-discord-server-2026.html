@@ -7,8 +7,217 @@
     <meta name="description" content="Discover why TheIndia is the #1 rated Indian Discord server in 2026. Join 18k+ members for gaming, 24/7 Hindi VCs, and a safe community experience.">
     <meta name="keywords" content="Best Indian Discord Server, India Discord 2026, Active Hindi VC, Safe Desi Community, TheIndia Discord">
     
-    <!-- Link to your existing font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     
-    <!-- We will add your Manifesto CSS here in the next step -->
+    <style>
+        :root {
+            --bg-color: #080808;
+            --text-color: #ffffff;
+            --saffron: #FF9933;
+            --green: #138808;
+            --discord: #5865F2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 15% 0%, rgba(255, 153, 51, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 100%, rgba(19, 136, 8, 0.08) 0%, transparent 40%);
+            padding: 140px 20px 60px 20px;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-brand span { color: var(--saffron); }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--saffron); }
+
+        .nav-btn {
+            background-color: var(--discord);
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            box-shadow: 0 4px 15px -5px var(--discord);
+        }
+
+        /* --- CONTENT --- */
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(90deg, #FF9933, #ffffff, #138808);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 40px;
+        }
+
+        .blog-card h2 {
+            color: #e2e8f0;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            border-bottom: 2px solid rgba(255, 153, 51, 0.3);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .blog-card h3 {
+            color: var(--saffron);
+            margin: 25px 0 10px 0;
+            font-size: 1.4rem;
+        }
+
+        .blog-card p {
+            color: #a1a1aa;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .blog-card strong { color: white; }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-main {
+            display: inline-block;
+            background-color: var(--discord);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .cta-main:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(88, 101, 242, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100%;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            nav { flex-direction: column; padding: 15px; }
+            .nav-links { gap: 15px; margin-top: 10px; }
+            .section-title { font-size: 2.2rem; }
+            body { padding-top: 180px; }
+        }
+    </style>
 </head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-brand">The<span>India</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="https://discord.gg/theindia" class="nav-btn">Join Now</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Latest Updates</h1>
+
+        <article class="blog-card">
+            <h2>Why TheIndia is the Best Indian Discord Server in 2026</h2>
+            
+            <p>Searching for the <strong>Best Indian Discord Server</strong> can be overwhelming. With thousands of options, most users are looking for a specific "vibe"—one that combines high activity with a safe, welcoming atmosphere. In 2026, <strong>TheIndia</strong> has emerged as the definitive digital Adda for over 18,000 members.</p>
+
+            <h3>1. Unmatched Activity: 24/7 Hindi Voice Chats</h3>
+            <p>The heart of any community is its voice. While many servers struggle with "dead" channels, our VCs are active around the clock. Whether it is a 3 AM deep-talk session or a high-energy gaming squad, you will always find someone to connect with in our <strong>active Hindi VCs</strong>.</p>
+
+            <h3>2. Safety First: A Toxic-Free Experience</h3>
+            <p>Inspired by the philosophy of <em>"Vasudhaiva Kutumbakam"</em> (the world is one family), we prioritize respect above all else. Our dedicated moderation team and custom bot features ensure a <strong>toxic-free Indian Discord</strong> environment where everyone feels heard and respected.</p>
+
+            <h3>3. The Ultimate Gaming & Social Hub</h3>
+            <p>From competitive <strong>Valorant India</strong> matches and <strong>BGMI</strong> tournaments to Bollywood watch parties and late-night music sessions, we offer a diverse range of activities. We aren't just a server; we are a lifestyle hub for the modern Desi community.</p>
+
+            <div class="cta-container">
+                <a href="https://discord.gg/theindia" class="cta-main">Join TheIndia Discord</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        &copy; 2026 TheIndia Community. All rights reserved.
+    </footer>
+
+</body>
+</html>
