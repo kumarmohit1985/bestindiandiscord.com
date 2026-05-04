@@ -85,13 +85,22 @@
         .cta-main { display: inline-block; background-color: var(--discord); color: white; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.3rem; transition: 0.4s; }
         .cta-main:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(88, 101, 242, 0.4); }
 
-        /* --- FOOTER (Matches Requested Image) --- */
+        /* --- INTERLINKING SECTION --- */
+        .interlink-section { background: rgba(255, 255, 255, 0.02); padding: 50px 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; margin-top: 20px; }
+        .interlink-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
+        .interlink-card { text-decoration: none; background: rgba(8, 8, 8, 0.5); padding: 25px; border-radius: 15px; border: 1px solid rgba(255, 153, 51, 0.2); transition: 0.3s; text-align: left; }
+        .interlink-card:hover { border-color: var(--saffron); transform: translateY(-3px); }
+        .interlink-card h4 { color: var(--saffron); margin-bottom: 10px; font-size: 1.2rem; }
+        .interlink-card p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 0; }
+
+        /* --- FOOTER --- */
         footer {
             background: rgba(8, 8, 8, 0.95);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             padding: 60px 20px 20px;
             width: 100%;
             backdrop-filter: blur(10px);
+            margin-top: 60px;
         }
 
         .footer-content {
@@ -159,6 +168,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="live-status.html">Live Status</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="https://discord.gg/theindia" class="nav-btn">Join Now</a></li>
         </ul>
@@ -193,6 +203,21 @@
                 <p style="color: white; margin-bottom: 20px; font-weight: 600;">Are you ready to join the #1 Digital Adda in India?</p>
                 <a href="https://discord.gg/theindia" class="cta-main">Join 18,000+ Members Now</a>
             </div>
+
+            <!-- INTERLINKING SECTION -->
+            <div class="interlink-section">
+                <h3 style="margin-top: 0; text-align: center; color: white;">Explore More 2026 Guides</h3>
+                <div class="interlink-grid">
+                    <a href="best-servers-2026.html" class="interlink-card">
+                        <h4>Top 10 Active Servers</h4>
+                        <p>Check our updated list of the most active Indian communities on Discord this year.</p>
+                    </a>
+                    <a href="find-friends-discord-india.html" class="interlink-card">
+                        <h4>Making Friends in 2026</h4>
+                        <p>Learn why Discord is the safest and best place to find your digital circle in India.</p>
+                    </a>
+                </div>
+            </div>
         </article>
     </div>
 
@@ -208,6 +233,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Our Community</a></li>
+                    <li><a href="live-status.html">Live Server Status</a></li>
                     <li><a href="vote.html">Support & Vote</a></li>
                     <li><a href="blog.html">Server Blog & Updates</a></li>
                     <li><a href="faq.html">FAQ</a></li>
